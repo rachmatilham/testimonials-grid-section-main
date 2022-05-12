@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution page on Frontend Mentor]()
+- Solution URL: [Solution page on Frontend Mentor](https://www.frontendmentor.io/solutions/testimonial-grid-section-r1-u25qIc)
 - Live Site URL: [Github Pages](https://rachmatilham.github.io/testimonials-grid-section-main/)
 
 ## My process
