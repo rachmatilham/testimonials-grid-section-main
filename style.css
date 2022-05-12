@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+:root {
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: var(--light-grayish-blue);
+}
+
+main {
+  padding: 47px 23px 57px;
+}
+
+article {
+  margin-top: 24px;
+  padding: 25px 31px 31px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 10px 25px 30px hsla(0, 0%, 81%, 0.5);
+  position: relative;
+  z-index: 1;
+}
+article .quote-bg {
+  width: 104px;
+  height: 102px;
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  right: 25px;
+}
+article .profile {
+  display: flex;
+  align-items: center;
+}
+article .avatar img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+article .author {
+  margin-left: 15px;
+  position: relative;
+  bottom: 1px;
+}
+article p.verified {
+  font-size: 0.86em;
+  opacity: 50%;
+}
+article h1 {
+  font-size: 1.55em;
+  margin-top: 12px;
+  padding-left: 1px;
+  padding-right: 3px;
+  position: relative;
+  z-index: 3;
+}
+article p.main {
+  font-size: 1.01em;
+  line-height: 1.37;
+  margin-top: 17px;
+  padding-left: 1px;
+  padding-right: 15px;
+  opacity: 70%;
+}
+
+article.daniel {
+  background-color: var(--moderate-violet);
+  color: var(--white);
+  position: relative;
+}
+article.daniel .avatar img {
+  border: 2px solid hsl(265, 71%, 72%);
+}
+
+article.jonathan {
+  background-color: var(--very-dark-grayish-blue);
+  color: var(--white);
+}
+article.jonathan .avatar img {
+  border: 2px solid var(--very-dark-grayish-blue);
+}
+article.jonathan .author {
+  bottom: 2px;
+}
+article.jonathan p.main {
+  padding-right: 3px;
+}
+
+article.jeanette {
+  background-color: var(--white);
+  color: var(--very-dark-grayish-blue);
+}
+article.jeanette .avatar img {
+  border: 2px solid var(--white);
+}
+
+article.patrick {
+  background-color: var(--very-dark-blackish-blue);
+  color: var(--white);
+}
+article.patrick .avatar img {
+  border: 2px solid hsl(265, 71%, 72%);
+}
+article.patrick .author {
+  bottom: 2px;
+}
+article.patrick p.main {
+  padding-right: 1px;
+}
+
+article.kira {
+  background-color: var(--white);
+  color: var(--very-dark-grayish-blue);
+}
+article.kira .profile {
+  position: relative;
+  bottom: 2px;
+}
+article.kira .avatar img {
+  border: 2px solid var(--white);
+}
+article.kira p.main {
+  padding-right: 2px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* RESPONSIVE DESIGN */
+@media (min-width: 768px) {
+  main {
+    margin: 165px auto 150px;
+    padding: 0;
+    max-width: 1110px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "a a b e"
+      "c d d e";
+    column-gap: 30px;
+    row-gap: 24px;
+  }
+
+  article {
+    margin-top: 0;
+    padding-bottom: 25px;
+  }
+  article .quote-bg {
+    right: 80px;
+  }
+  article h1 {
+    font-size: 1.54em;
+  }
+  article p.main {
+    font-size: 1em;
+    margin-top: 16px;
+  }
+
+  article.daniel {
+    grid-area: a;
+    padding-bottom: 31px;
+  }
+  article.daniel p.main {
+    padding-right: 5px;
+  }
+  article.jonathan {
+    grid-area: b;
+    padding-bottom: 31px;
+  }
+  article.jeanette {
+    grid-area: c;
+  }
+  article.jeanette p.main {
+    margin-top: 24px;
+    padding-right: 5px;
+  }
+  article.patrick {
+    grid-area: d;
+  }
+  article.patrick p.main {
+    margin-top: 24px;
+    padding-right: 5px;
+  }
+  article.kira {
+    grid-area: e;
+  }
+  article.kira p.main {
+    margin-top: 22px;
+    line-height: 1.39;
+  }
+}
