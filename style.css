@@ -155,6 +155,7 @@ article.kira p.main {
     max-width: 1110px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: repeat(4, 1fr);
     grid-template-areas:
       "a a b e"
       "c d d e";
